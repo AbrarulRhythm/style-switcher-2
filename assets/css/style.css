@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg: #1E1E1E;
+    --primary-color: #F1FAFF;
+    --secondary-color: #FF451B;
+    --secondary-color-tow: #888888;
+    --secondary-color-three: #2F3542;
+
+    /* Web Font */
+    --primary-font: 'Outfit', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+}
+
+.heading {
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--secondary-color);
+}
+
+/*========================================
+Style Switcher CSS
+========================================*/
+.color-switcher {
+    position: fixed;
+    top: 30%;
+    right: -200px;
+    width: 200px;
+    padding: 10px;
+    background: #FFF;
+    border: 1px solid #ddd;
+    border-radius: 0 0 0 5px;
+    z-index: 10;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.color-switcher.active {
+    right: 0;
+}
+
+.color-switcher h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #1E1E1E;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #8888884a;
+}
+
+.color-switcher .switcher-btn {
+    position: absolute;
+    top: 0;
+    left: -41px;
+    background: var(--body-bg);
+    color: #FFF;
+    padding: 9px 12px;
+    font-size: 17px;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+}
+
+.color-switcher .theme-buttons-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+}
+
+.color-switcher .theme-buttons-container .theme-button {
+    display: block;
+    height: 30px;
+    width: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
